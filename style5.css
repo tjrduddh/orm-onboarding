@@ -2,52 +2,86 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-header {
-    background-color: #333;
+    background-color: #fefefe; /* Light Gray */
+  }
+  
+  header {
+    background-color: #181716; /* Alizarin Red */
     color: #fff;
-    padding: 1em;
+    text-align: left;
+  }
+  
+  .tagline {
+    font-style: italic;
+    font-size: 1.2em;
+    margin-top: 5px;
+    color: #ecf0f1; /* Silver */
+  }
+  
+  .description {
+    font-size: 20px;
+    max-width: 1100px;
+    margin: 40px auto;
     text-align: center;
-}
+    color: #304c68; /* Wet Asphalt */
+  }
+  
+  .menu {
+    margin: 20px;
+    max-width: calc(100% - 40px); /* Set maximum width with margins subtracted */
+    text-align: center;
+  }
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav a {
-    text-decoration: none;
+  .menu h2 {
+    margin-bottom: 50px;
+    font-size: 35px;
+  }
+  
+  .menu-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    overflow-x: auto; /* Add horizontal scrollbar if items overflow */
+  }
+  
+  .menu-item {
+    text-align: center;
+    width: 150px; /* Adjust as needed */
+  }
+  
+  .menu-item img {
+    width: 100%;
+    border-radius: 8px 8px 0 0; /* Round the top corners */
+  }
+  
+  .menu-item h3 {
+    color: #e74c3c; /* Alizarin Red */
+    font-size: 1.5em; /* Adjusted font size */
+    white-space: nowrap; /* Prevent text from wrapping to the next line */
+    overflow: hidden; /* Hide any overflow */
+    text-overflow: ellipsis; /* Display an ellipsis (...) for overflowed text */
+  }
+  
+  .menu-item p {
+    color: #34495e; /* Wet Asphalt */
+    font-size: 1.4em; /* Increased font size */
+  }
+  
+  .spacing {
+    height: 10px; /* Adjusted spacing height */
+  }
+  
+  .photos {
+    background: url('your-background-image.jpg') center/cover no-repeat;
+    height: 400px;
+  }
+  
+  footer {
+    background-color: #252222;
     color: #fff;
-}
-
-#hero {
-    background-image: url('restaurant-image.jpg');
-    background-size: cover;
-    color: brown;
     text-align: center;
-    padding: 2em 0;
-}
-
-#menu, #about, #contact {
-    padding: 2em 0;
-    text-align: center;
-}
-
-.menu-item {
-    margin-bottom: 30px;
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 1em;
-    text-align: center;
-}
+    padding: 1em 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
