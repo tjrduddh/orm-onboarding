@@ -1,0 +1,61 @@
+/* 
+유형(태그) 선택자 (Type Selector):
+
+css
+Copy code
+
+p {
+    color: blue;
+}
+이 선택자는 모든 <p> (문단) 요소를 선택하여 파란색으로 텍스트 색상을 변경합니다.
+
+
+클래스 선택자 (Class Selector):
+.example {
+    font-size: 16px;
+}
+이 선택자는 class="example"로 지정된 모든 요소를 선택하여 글꼴 크기를 16px로 설정합니다.
+
+
+ID 선택자 (ID Selector):
+#header {
+    background-color: #ccc;
+}
+이 선택자는 id="header"로 지정된 특정 요소를 선택하여 배경색을 회색으로 설정합니다.
+
+
+자식 선택자 (Child Selector):
+ul > li {
+    list-style-type: square;
+}
+이 선택자는 <ul> 안에 있는 직계 <li> 자식 요소들을 선택하여 목록 스타일을 사각형으로 설정합니다.
+
+
+자손 선택자 (Descendant Selector):
+article p {
+    font-style: italic;
+}
+이 선택자는 <article> 요소 안에 있는 모든 <p> 자손 요소들을 선택하여 글꼴 스타일을 이탤릭으로 설정합니다.
+
+
+속성 선택자 (Attribute Selector):
+input[type="text"] {
+    border: 1px solid #999;
+}
+이 선택자는 type 속성이 "text"인 모든 <input> 요소를 선택하여 테두리를 회색으로 설정합니다.
+
+
+의사 클래스 선택자 (Pseudo-class Selector):
+a:hover {
+    color: red;
+}
+이 선택자는 마우스를 요소 위로 가져갈 때 <a> (링크) 요소에 대한 색상을 빨간색으로 변경합니다.
+
+
+의사 요소 선택자 (Pseudo-element Selector):
+p::first-line {
+    font-weight: bold;
+}
+이 선택자는 <p> 요소의 첫 번째 행에 대한 글꼴 두껍게 설정을 변경합니다.
+
+이러한 선택자들은 각각 특정한 방식으로 요소를 선택하고 스타일을 적용할 수 있습니다. 선택자를 조합하여 복잡한 스타일을 정의할 수도 있습니다. */
