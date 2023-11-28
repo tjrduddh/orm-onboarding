@@ -1,0 +1,100 @@
+
+<html>
+    <body>
+        <h1>var, let, const 변수/정수 사용하기</h1>
+
+
+
+        <script>
+            
+            var userName = "오영석";
+            var age = 20;
+            var price = 5000;
+            var isMale = true;
+
+            // 기본배송비
+            var baseDelyfee = 3000;
+
+            // 기본 배송비는 변경이 안되어야 하는데 var변수특성에 의해 언제든 변경이 가능하다.
+            baseDelyfee = 13000;
+
+            console.log("웹브라우저 콘솔영역에 로깅한다-기본배송비:",baseDelyfee);
+
+            // 기본 배송비를 상수로 선언한다.
+            //상수는 한번 값을 할당하면 변경이 불가하다.
+            const newBaseDelyFee = 5000;
+
+            console.log("상수로 표현하는 기본배송비:",newBaseDelyFee);
+
+            //상수값을 변경해보자 <== 에러가 발생합니다.
+            //newBaseDelyFee = 8000;
+
+            //전체 결제금액: 항상 값이 변경이 가능하다.
+            let totalPayPrice = 0;
+
+            totalPayPrice += baseDelyfee;
+            totalPayPrice += price;
+
+            console.log("총 결제금액은 : ",totalPayPrice);
+
+            //const와 let 신규문법은 블록 스코프 제약이 있습니다.
+
+            if(isMale == true){
+                //지금 감싸고 있는 중괄호가 블록 스코프 : 변수의 생명주기 즉,변수가 사용되는 범위
+                var msg="남성입니다.";
+                console.log("if구문블록 범위(스코프)안에서 선언된 msg를 출력합니다.",msg);
+            }
+
+
+            console.log("if구문블록 범위(스코프)밖에서 msg를 출력합니다.",msg);
+
+            const region = "제주도";
+
+            if(region == "제주도"){
+                //추가 배송비를 상수로 선언한다.
+                const addDelyFee = 2000;
+                let addMsg = "기본 메시지입니다.";
+                totalPayPrice += addDelyFee;
+                console.log("if블록범위안에서 총결제금액과 추가배송비를 출력한다.",addDelyFee,totalPayPrice);
+            }
+
+            //totalPayPrice += addDelyFee;//블록스코프 제약 에러발생
+            //console.log("if구문내에서 선언된 addDelyFee 상수를 범위밖에서 사용하면?? 에러발생..",addDelyFee);
+            //console.log("let 블록스코프 위반 테스트:",addMsg);
+
+            //var 재선언 가능, 
+            //let 중복 선언 불가능, 재할당 가능
+            //const 중복 선언 불가능, 재할당 불가능
+
+            // 예제
+            // var fruits = "apple";
+
+            // var count = 5;
+
+            // const message = "사과의 갯수는 ?";
+            // console.log(message);
+
+            // if (count > 4) {
+            //     const message = "사과의 갯수는 5개 입니다.";
+            //     console.log(message);
+            // }
+
+            // console.log(message);
+
+            
+            // const fruits = {
+            //     fruits: "apple",
+            //     count: 5,
+            //     message: "사과 5개",
+            // };
+
+            // console.log(fruits);
+            // console.log("----------------");
+            // fruits.count = 4;
+            // fruits.fruits = "banana";
+            // fruits.message = "사과 4개";
+            // console.log(fruits);
+
+        </script>
+    </body>
+</html>

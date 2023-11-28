@@ -1,0 +1,395 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기초문법실습</title>
+
+    <script>
+        // var name = "오영석"; // 문자열
+        // var age = 30; // 정수
+        // var remain = 0.5; // 실수 
+        // var bool = false; // 참과 거짓 자료형
+
+        // //js에서 출력문
+        // console.log(name);
+
+        // alert(age);
+
+        // const name = "Mike";
+
+        // console.log(typeof 3);
+        // console.log(typeof name);
+        // console.log(typeof true);
+        // console.log(typeof "xxx");
+        // console.log(typeof null);
+        // console.log(typeof undefined);
+
+        // const name = "Mike";
+        // const message = `My name is ${name}`;
+
+        // const message2 = "My name is ${name}";
+        // console.log(message2)
+
+        // const name = "Mike";
+
+        // const a = "나는 ";
+        // const b = "입니다.";
+
+        // console.log(a + name + b);
+
+        // const age = 30;
+        // console.log(a + age + "살" + b);
+
+        // prompt 입력  > 문자형 "90""80"
+        // "9080" / 2 = 4540 
+        // "6"/"3"=2          > 자동 형변환
+
+        // 명시적 형변환  > 앞에 첫글자 대문자S
+        // String() 
+        // Number() / ("문자") > NaN / (null) > 0 / (undefined) > NaN
+        // Boolean()
+        //   false >> 숫자 0 / 빈 문자열 "" / null / undefined / NaN
+
+        // console.log(
+        //     Boolean(1),
+        //     Boolean(123),
+        //     Boolean('javascript')
+        // )
+        
+        // console.log(
+        //     Boolean(0),
+        //     Boolean(""),
+        //     Boolean(null),
+        //     Boolean(undefined),
+        //     Boolean(NaN),
+        // )
+
+        // Boolean(0) > false
+        // Boolean('0') > true
+
+        // Boolean('') > false
+        // Boolean(' ') > true
+
+        // let num = 10;
+        //    
+        // num += 5;
+        // > num = num + 5;
+
+        // console.log(num);
+
+        // 증가연산자, 감소연산자
+        // let num = 10;
+        // let result = ++num; // 뒤에 ++을 넣으면 값이 증가X
+            
+        // console.log(result);
+
+        // 비교연산자
+        // < > <= >= ==(같은가) !=(값이 다른가)
+        // 왼쪽에서 오른쪽으로
+
+        // console.log(10 > 5);
+        // console.log(10 == 5);
+        // console.log(10 != 5);
+
+        // const a = 1;
+        // const b = "1";
+        // console.log(a === b); 일치연산자
+        
+
+        //조건문
+
+        // const age = 19;
+
+        // if(age > 19){
+        //     console.log('환영합니다');
+        // } else if(age === 19) {
+        //     console.log('수능 잘치세요');
+        // } else {
+        //     console.log('안녕히가세요');
+        // }
+
+        // console.log('----------------');
+
+        // else if() > 조건 추가할 때
+        // else > 나머지일 때
+        
+        // 논리 연산자
+        // || (or) 하나만 맞아도 true
+        // && (and) 모두 맞아야 true
+        // !  (not)  기본값의 true와 false 값 반대로
+
+        // const gender = "남자";
+        // const age = 19;
+        // const isAdult = age > 19;
+        // const count = 1;
+
+        // if(gender === '남자' && isAdult && count === 1){
+        //     console.log('10000원 입니다.');
+        // } else {
+        //     console.log('무료입니다.');
+        // }
+
+        // const name = prompt("번호를 입력하세요.", "010-xxxx-xxxx");
+        // alert(`제 번호는 ${name}입니다. 반갑습니다!`);
+        // console.log(name);   
+
+        // const isAdult = confirm("당신은 성입 입니까?");
+
+        // console.log(isAdult);
+
+        // 반복문 loop > 동일한 작업을 여러번 반복
+
+        // for > 명확한 횟수가 정해져 있을 경우 주로 사용
+        // for(let i = 0; i < 10; i++) {
+        //     //반복할 코드
+        // }
+        
+        // while > for문 외 무한반복?에 사용
+        // let = 0;
+
+        // while(i < 10) {
+        //     //i는 계속 0이기 때문에 무한반복하므로 이대로 코드실행x
+        //     i++; //값이 증가하도록 코드 작성해줌
+        // }
+
+        // do.. while
+        // let i = 0;
+
+        // do {
+        //     //코드 실행 후 조건문 실행, 적어도 한번은 실행하는게 while문과의 차이
+        //     i++;
+        // } while(i < 10)
+
+        // break > 멈추고 빠져나옴
+        // continue > 멈추고 다음 반복으로 진행
+
+        // switch > if문과 비슷
+
+        //함수 (function)
+        //함수 선언문 : 어디서든 호출가능
+        //hoisting 호이스팅 >> 자바스크립트는 실행 전 초기화 단계에서 코드의 모든 함수선언문을 찾아서 모아놓는다.
+        //                     그래서 함수의 사용범위가 호출하는 코드위치보다 위로 가게 되는 방식 
+        //매개변수가 없는 함수
+        // function showError(){
+        //     alert('에러가 발생했습니다. 다시 시도해주세요.');
+        // }
+
+        // showError();
+
+        //매개변수가 있는 함수
+        
+        // function sayHello(name){
+        //     const msg = `Hello, ${name}`;
+        //     console.log(msg);
+        // }
+
+        // //함수를 만들어 놓으면 매개변수를 바꿔가며 다양하게 대응이 가능
+        // sayHello('dike');
+        // sayHello('dike2');
+        // sayHello('dike3');
+
+        // 아래 전역변수 let은 전체 서비스에서 공통으로 바라봐야되는 변수를 제외하고는 지역변수로 쓰는것이 효율적
+        // 전역변수가 많아지면 관리가 힘들어지기 때문에 함수에 특화된 지역변수를 사용하길 권장
+        // let msg = 'Hello'; //전역변수 (global varable)
+        // console.log('함수 호출 전');
+        // console.log(msg);
+
+        // function sayHello(name){
+        //    // let msg = 'Hello';
+        //     if(name){
+        //         msg += `, ${name}!`;
+        //     }
+        //     console.log('함수 내부'); //지역변수 (local varable)
+        //     console.log(msg);
+        // }
+
+        // //sayHello();
+        // sayHello('doke');
+        // console.log('함수 호출 후');
+        // console.log(msg);
+
+        // // default value 기본값 설정
+        // function sayHello(name = 'friend'){
+        //     let msg = `Hello, ${name}`;
+        //     console.log(msg);
+        // }
+
+        // sayHello();
+        // sayHello('Jane');
+
+        //return으로 값 변환, return 오른쪽에 있는 값을 반환
+
+        // function add(num1, num2){
+        //     return num1 + num2;
+        // }
+
+        // const result = add(2,3);
+        // console.log(result);
+
+        //함수를 종료하는 목적으로 사용하기도 함
+        // function showError(){
+        //     alert('에러가 발생했습니다.');
+        //     return;
+        //     alert('이 코드는 절대 실행되지 않을걸?');
+        // }
+
+        // const result = showError();
+        // console.log(result);
+
+        // 함수
+        // > 한번에 한작업에 집중
+        // > 읽기 수비고 어떤 동작인지 알 수 있게 네이밍
+        //     showError //에러를 보여줌
+        //     getName // 이름을 얻어옴
+        //     createUserData // 유저데이터 생성
+        //     checkLogin // 로그인 여부 체크
+
+        //함수 표현식 : 코드에 도달하면 생성 (순서대로 생성)
+
+            // let sayHello = function(){
+            //     console.log('Hello');
+            // }
+            
+            // sayHello();
+
+        // // => 화살표 함수 : 함수를 보다 간결하게 작성 
+        // // ES6 이후 활발하게 사용중. 익숙해져야함
+        // let add = function(num1, num2){
+        //     return num1 + num2;
+        // } 
+        // // 위 함수를 화살표 함수로 바꾸면
+        // let add =     (num1, num2) =>{
+        //     return num1 + num2;
+        // }
+        // // 코드가 한줄이고 return문이 있다면 return을 없애고 {} > () 바꿀 수 있다
+        // let add =     (num1, num2) =>(
+        //     num1 + num2;
+        // )
+        // // return문이 한줄이라면 괄호도 생략 가능
+        // let add = (num1, num2) => num1 + num2;
+        // // return문이 있어도 return 실행 전 여러줄의 코드가 있을 경우 ()괄호 사용 불가능
+        // let add = (num1, num2) => {
+        //     const result = num1 + num2;
+        //     return result;
+        // }
+        // //인수가 하나라면 괄호 생략 가능
+        // let sayHello = name => `Hello, ${name}`; // (name)
+        // // 인수가 없다면 괄호 생략 불가능
+        // let sayHello = () => `Hello, ${name}`;
+
+        // Object
+
+        // const superman = {
+        //     name : 'clark',
+        //     age : 30,
+        // }
+
+        //추가하기
+        // superman.hobby = 'soccer';
+        // superman['sports'] = 'baseball';
+        //삭제하기
+        // delete superman['name'];
+        // delete superman.age;
+
+        // console.log(superman);
+
+        //객체
+
+        // function makeObject(name, age) {
+        //     return {
+        //         //name : name,
+        //         name, // 축약형으로 바꿔줌
+        //         //age : age,
+        //         age,  // 축약형으로 바꿔줌
+        //         hobby : "football"
+        //     };
+        // }
+
+        // const Mike = makeObject("mike", 30);
+        // console.log(Mike);
+
+        // // in을 이용해 프로퍼티 안에 존재여부 확인
+        // console.log("age" in Mike);
+        // console.log("gender" in Mike);
+
+        //for ..in
+
+        // const Mike = {
+        //     name: "Mike",
+        //     age: 30
+        // };
+
+        // for(what in Mike){
+        //     console.log(Mike[what]); // Mike['name']을 돌고 Mike['age']를 돈다 
+        // };
+
+
+        //method : 객체 프로퍼티로 할당 된 함수(객체 안에 함수가 추가됨)
+
+        // 화살표 함수는 일반 함수와는 달리 자신만의 this를 가지지 않음
+        //  화살표 함수 내부에서 this를 사용하면, 그 this는 외부에서 값을 가져 옴.
+
+        // 객체의 메소드와 메소드 작성시 this의 변화
+        
+
+        // Array 배열 : 순서가 있는 리스트
+        //              배열을 탐색할 때 고유번호를 사용 0,1,2..(index)
+
+        // 배열은 문자 뿐만 아니라, 숫자, 객체, 함수 등도 포함할 수 있음
+        // let arr = [
+        //     '민수',
+        //     3,
+        //     true,
+        //     {
+        //         name: 'Mike',
+        //         age: 30,
+        //     },
+        //     function(){
+        //         console.log('TEST');
+        //     }
+        // ];
+
+        // length : 배열의 길이  
+        // arr.length // 5
+
+        // push() : 배열 끝에 추가
+        // let days = ['월','화','수'];
+        // days.push('목')
+        // console.log(days) // ['월','화','수','목']
+
+        //pop() : 배열 끝 요소 제거
+        // let days = ['월','화','수'];
+        // days.pop()
+        // console.log(days) // ['월','화']
+
+
+        // shift, unshift 배열 앞에 제거/추가, 한번에 여러개도 가능
+        // 추가
+        // days.unshift('토','일'); 
+        // console.log(days) // ['토','일','월','화','수']
+
+        // 제거
+        // days.shift();
+        // console.log(days) // ['월','화','수']
+
+        // 반복문 for / for ..of
+        // let days = ["mon", "tue", "wed"];
+
+        // days.push("thu");
+        // days.unshift("sun");
+
+        // for (let index = 0; index < days.length; index++) {
+        //     console.log(days[index]);
+        // }
+
+        // for (let x of days) {
+        //     console.log(x);
+        // } 
+
+
+        </script>
+</head>
+<body>
+    
+</body> 
+</html>
